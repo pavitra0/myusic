@@ -1,9 +1,19 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kotlin.ksp)
 }
+
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties().apply {
+    if (keystorePropertiesFile.exists()) {
+        keystorePropertiesFile.inputStream().use(::load)
+    }
+}
+val isReleaseSignable = keystoreProperties.getProperty("storePassword").isNullOrBlank().not()
 
 android {
     namespace = "io.github.pavitra0.myusic"
@@ -23,12 +33,25 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            if (keystorePropertiesFile.exists()) {
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
         }
 
         release {
+            if (isReleaseSignable) signingConfig = signingConfigs.getByName("release")
+
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
