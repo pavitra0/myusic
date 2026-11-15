@@ -121,10 +121,10 @@ fun About() {
     if (isShowingDialog) {
         LaunchedEffect(Unit) {
             if (newVersionAvailable == null || latestVersion == null) {
-                latestVersion = GitHub.getLastestRelease()?.name
-                latestVersion?.let {
-                    newVersionAvailable = it > currentVersion
-                }
+                val releaseVersion = GitHub.getLastestRelease()?.tagName?.removePrefix("v")
+                latestVersion = releaseVersion
+                newVersionAvailable =
+                    releaseVersion != null && isNewerVersion(releaseVersion, currentVersion)
             }
         }
 
@@ -193,4 +193,18 @@ fun About() {
             }
         )
     }
+}
+
+private fun isNewerVersion(latest: String, current: String): Boolean {
+    val latestParts = latest.split('.').map { it.takeWhile(Char::isDigit).toIntOrNull() ?: 0 }
+    val currentParts = current.split('.').map { it.takeWhile(Char::isDigit).toIntOrNull() ?: 0 }
+
+    for (index in 0 until maxOf(latestParts.size, currentParts.size)) {
+        val latestPart = latestParts.getOrElse(index) { 0 }
+        val currentPart = currentParts.getOrElse(index) { 0 }
+
+        if (latestPart != currentPart) return latestPart > currentPart
+    }
+
+    return false
 }

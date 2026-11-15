@@ -13,6 +13,7 @@ class ReleaseService(
             val response =
                 client.get("https://api.github.com/repos/pavitra0/myusic/releases") {
                     header("X-GitHub-Api-Version", "2022-11-28")
+                    header("User-Agent", "Myusic")
                 }
             return response.body()
         } catch (_: Exception) {
