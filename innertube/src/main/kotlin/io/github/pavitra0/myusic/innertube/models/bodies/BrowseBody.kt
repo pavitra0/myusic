@@ -1,0 +1,13 @@
+package io.github.pavitra0.myusic.innertube.models.bodies
+
+import io.github.pavitra0.myusic.innertube.models.Context
+import io.github.pavitra0.myusic.innertube.models.YouTubeClient
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class BrowseBody(
+    val localized: Boolean = true,
+    val context: Context = YouTubeClient.WEB_REMIX.toContext(localized = localized),
+    val browseId: String,
+    val params: String? = null
+)

@@ -1,0 +1,80 @@
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :kugou:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :github:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ktor-client-brotli:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :innertube:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :innertube:processResources NO-SOURCE
+> Task :ktor-client-brotli:processResources NO-SOURCE
+> Task :github:processResources NO-SOURCE
+> Task :kugou:processResources NO-SOURCE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugGlobalSynthetics UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:l8DexDesugarLibDebug UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :ktor-client-brotli:compileKotlin UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :ktor-client-brotli:compileJava NO-SOURCE
+> Task :ktor-client-brotli:classes UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :ktor-client-brotli:jar UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :innertube:compileKotlin UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :innertube:compileJava NO-SOURCE
+> Task :innertube:classes UP-TO-DATE
+> Task :innertube:jar UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :github:compileKotlin
+> Task :github:compileJava NO-SOURCE
+> Task :github:classes UP-TO-DATE
+> Task :github:jar UP-TO-DATE
+> Task :kugou:compileKotlin
+> Task :kugou:compileJava NO-SOURCE
+> Task :kugou:classes UP-TO-DATE
+> Task :kugou:jar UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :app:kspDebugKotlin
+> Task :app:compileDebugKotlin
+w: file:///C:/Users/pavitra/AndroidStudioProjects/music-you/app/src/main/kotlin/io/github/pavitra0/myusic/service/PlayerService.kt:749:36 'class NotificationCompat : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/pavitra/AndroidStudioProjects/music-you/app/src/main/kotlin/io/github/pavitra0/myusic/service/PlayerService.kt:749:55 'constructor(): NotificationCompat.MediaStyle' is deprecated. Deprecated in Java.
+w: file:///C:/Users/pavitra/AndroidStudioProjects/music-you/app/src/main/kotlin/io/github/pavitra0/myusic/service/PlayerService.kt:751:38 'class MediaSessionCompat : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/pavitra/AndroidStudioProjects/music-you/app/src/main/kotlin/io/github/pavitra0/myusic/service/PlayerService.kt:751:57 'class Token : Any, Parcelable' is deprecated. Deprecated in Java.
+
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:processDebugJavaRes
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+[Incubating] Problems report is available at: file:///C:/Users/pavitra/AndroidStudioProjects/music-you/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 6m 10s
+46 actionable tasks: 10 executed, 36 up-to-date
+Configuration cache entry reused.

@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.github.musicyou"
+    namespace = "io.github.pavitra0.myusic"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.github.musicyou"
+        applicationId = "io.github.pavitra0.myusic"
         minSdk = 23
         versionCode = 16
         versionName = "1.1.2"

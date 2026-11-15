@@ -22,7 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MusicYou"
+rootProject.name = "Myusic"
 include(":app")
 include(":innertube")
 include(":ktor-client-brotli")

@@ -1,8 +1,10 @@
-# Music You
+# Myusic
 
-An Android application for streaming music from YouTube Music.
+An Android app for streaming music from YouTube Music, with background playback, offline caching and synchronized lyrics.
 
 ![Repository preview](./screenshots/repository_preview.jpg)
+
+This project is a fork of [Music You](https://github.com/DanielSevillano/music-you) by Daniel Sevillano, which is no longer maintained. It is rebuilt and maintained here as **Myusic**, with playback, search and lyrics fixes.
 
 ## ✨ Features
 
@@ -17,20 +19,26 @@ An Android application for streaming music from YouTube Music.
 - Audio features, such as skip silence and audio normalization
 - Other features, such as Android Auto support and invincible service
 
-### 🗒️ New features
+## 📲 Installation
 
-- Material You redesign
-- Multilingual support
-- Quick picks selection customization
-- Swipe to enqueue and delete songs
+Build the debug or release APK from source:
 
-## 🌐 Available languages
+```
+./gradlew :app:assembleDebug
+```
 
-- English
-- Spanish
-- German ([@siggi1984](https://github.com/siggi1984))
-- French ([@patxixi](https://github.com/patxixi) and [@Mickael81](https://github.com/Mickael81))
-- Italian ([@F3FFO](https://github.com/F3FFO))
+The app id is `io.github.pavitra0.myusic` (debug builds use the `.debug` suffix, so they install side by side).
+
+## 🛠️ Building
+
+- JDK 17
+- Android SDK with compile SDK 37
+
+Point Gradle at your SDK in `local.properties`:
+
+```
+sdk.dir=/path/to/Android/Sdk
+```
 
 ## 📸 Screenshots
 
@@ -43,24 +51,15 @@ An Android application for streaming music from YouTube Music.
     <img src="./screenshots/screenshot_albums.png" alt="Albums" style="width: 30%;">
 </div>
 
-## 📲 Installation
+## 📄 License
 
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"
-alt="Get it on GitHub"
-height="80">](https://github.com/DanielSevillano/music-you/releases/latest)
+Licensed under the GNU General Public License v3.0, the same license as the original Music You project. See [LICENSE](./LICENSE).
 
-## 🌟 Inspiration
-
-- [ViMusic](https://github.com/vfsfitvnm/ViMusic)
-- [RiMusic](https://github.com/fast4x/RiMusic)
-- [ViTune](https://github.com/25huizengek1/ViTune)
-- [InnerTune](https://github.com/z-huang/InnerTune)
-- [OuterTune](https://github.com/OuterTune/OuterTune)
-- [Symphony](https://github.com/zyrouge/symphony)
+Because this is a modified version of a GPL-3.0 project, the original copyright notice and license are kept, and the changes are published under the same license.
 
 ## ℹ️ Disclaimer
 
-This project and its contents are not affiliated with, funded, authorized, endorsed by, or in any
+This project and its contents are not affiliated with, funded, authorized, endorsed or in any
 way associated with YouTube, Google LLC or any of its affiliates and subsidiaries.
 
 Any trademark, service mark, trade name, or other intellectual property rights used in this project
